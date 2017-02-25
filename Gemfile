@@ -43,7 +43,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'webmock'
-
+  gem 'pry'
 end
 
 group :development do
