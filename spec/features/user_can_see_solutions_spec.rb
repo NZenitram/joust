@@ -5,6 +5,6 @@ describe 'when a user visits root' do
 
     visit root_path
 
-    expect(page).to have_content("ham ham ham")
+    expect(page).to have_content
   end
 end
