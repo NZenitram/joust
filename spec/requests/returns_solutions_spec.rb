@@ -19,9 +19,7 @@ describe '/GET exercises' do
 
     it 'returns solution content' do
 
-      response = Faraday.get('https://code-of-arms.herokuapp.com/api/v1/exercises/2')
-
-      solution = CodeOfArmsService.parse_response(response)
+      solution = CodeOfArmsService.get_response
 
       expect(solution.class).to be(Array)
     end
