@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'omniauth-census', git: "https://github.com/turingschool-projects/omniauth-census"
+gem 'thin'
 gem 'faraday'
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
