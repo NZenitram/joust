@@ -1,14 +1,13 @@
 module CodeOfArmsService
-  
-  def self.get_solution_pairs(all_solutions)
-    most_recent_winner = Comment.where(user_id: current_user.id).last.winner
-    all_solutions.each do |solution|
-      if 
-        
-      end
+
+  def self.get_solution_pairs(all_solutions, current_user)
+    if Comment.where(user_id: current_user.id).last.winner.nil?
+      all_solutions.take(2)
+    else
+      most_recent_winner = Comment.where(user_id: current_user.id).last.winner
     end
   end
-  
+
   def self.get_response
     response = Faraday.get('https://code-of-arms.herokuapp.com/api/v1/exercises')
     exercise_object = JSON.parse(response.body, symbolize_names: true)

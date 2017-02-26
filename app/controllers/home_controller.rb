@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    @solutions = CodeOfArmsService.get_response.take(2)
+    all_solutions = CodeOfArmsService.get_response
+    @solutions = CodeOfArmsService.get_solution_pairs(all_solutions, current_user)
   end
 
   def create
