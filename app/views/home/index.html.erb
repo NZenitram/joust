@@ -1,4 +1,9 @@
-<% @solutions.each do |solution| %>
-  <%= solution[:content] %>
-  <%= button_to 'Vote +', "", class: 'vote-button' %>
+
+
+<%= form_for :comments do |f| %>
+  <%= @solutions.first[:content]%>
+  <%= f.button 'vote' %><br />
+  <%= @solutions.second[:content]%>
+  <%= f.button 'vote' %>
+  <%= f.text_field :comment %>
 <% end %>
