@@ -1,6 +1,7 @@
-class Api::V1::CommentsController < ApplicationController
+class Api::V1::CommentsController < ApiController
 
   def create
+    binding.pry
     comment = Comment.new(comment_params)
     if comment.save
       render json: comment, status: 200
