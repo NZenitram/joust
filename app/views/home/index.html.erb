@@ -1,9 +1,19 @@
+<div class="container">
 
+  <div class="row">
+    <div id="solution-code-one" >
+      <%= CodeRay.scan(@solutions.first[:content], :ruby).div.html_safe %>
+      <%= button_to 'Vote', "", id: 'solution-one' %>
+    </div>
 
-<%= form_for :comments do |f| %>
-  <%= CodeRay.scan(@solutions.first[:content], :ruby).div.html_safe %>
-  <%= f.button 'vote' %><br />
-  <%= CodeRay.scan(@solutions.second[:content], :ruby).div.html_safe %>
-  <%= f.button 'vote' %>
-  <%= f.text_field :comment %>
-<% end %>
+    <div id="solution-code-one" >
+      <%= CodeRay.scan(@solutions.second[:content], :ruby).div.html_safe %>
+      <%= button_to 'Vote', "", id: 'solution-two' %>
+    </div>
+  </div>
+
+    <div id="comment">
+      <%= text_field(:comment, :post, placeholder: "Leave a comment to vote ") %>
+    </div>
+
+</div>
