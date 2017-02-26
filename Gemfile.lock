@@ -232,6 +232,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
+  coderay
   coffee-rails (~> 4.2)
   database_cleaner
   factory_girl_rails
