@@ -8,7 +8,7 @@ module CodeOfArmsService
 
   def self.retrieve_exercise(exercise_object)
     random_exercise = exercise_object.sample
-    if random_exercise[:solutions].nil? || random_exercise[:solutions].empty?
+    if random_exercise[:solutions].count < 2
       random_exercise = exercise_object.sample
     end
       parse_response(random_exercise)
