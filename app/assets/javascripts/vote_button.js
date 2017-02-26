@@ -8,7 +8,6 @@ $(document).ready(function(){
 
 
 function postWinningSolution(solution, commentContent){
-  debugger
   axios.post('/api/v1/comments', {
     comment: { winner: $(solution).attr('data-winner'),
                loser: $(solution).attr('data-loser'),
