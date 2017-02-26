@@ -4,6 +4,11 @@ $(document).ready(function(){
     event.preventDefault();
     postWinningSolution(this, commentContent);
   })
+  $('#solution-two').click(function(event){
+    var commentContent = $('#comment').val();
+    event.preventDefault();
+    postWinningSolution(this, commentContent);
+  })
 })
 
 
