@@ -3,6 +3,6 @@ FactoryGirl.define do
     winner 1
     loser 1
     comment "MyString"
-    user nil
+    user
   end
 end
