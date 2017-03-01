@@ -2,7 +2,7 @@
   <div class="row">
     <div id="solution-code-one" class="col s6 vote" >
     <% if current_user == nil %>
-     <%= image_tag 'shield.png', id: "shield" %>
+     <%= image_tag 'shield.png', id: "shield", class: "shield" %>
     <% else %>
       <%= CodeRay.scan(@solutions.first[:content], :ruby).div.html_safe %>
       <%= button_to 'Vote', "", id: 'solution-one', class: 'btn waves-effect waves-light', data: { winner: "#{@solutions.first[:id]}", loser: "#{@solutions.second[:id]}" } %>

@@ -170,9 +170,13 @@ h1, h2, h3, h4, h5, h6{
 /* Shield */
 
 .shield {
-  padding-top: 5%;
-  width: 225px;
-  margin: auto;
+  padding-top: 10%;
+  width: 225px !important;
+  margin: auto !important;
+  margin-left: 65% !important; 
+  display: flex;
+  justify-content: center;
+
 }
 
 #shield {
