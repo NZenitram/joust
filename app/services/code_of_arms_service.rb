@@ -1,11 +1,7 @@
 module CodeOfArmsService
 
   def self.get_solution_pairs(all_solutions, current_user)
-    if Comment.where(user_id: current_user.id).last.winner.nil?
-      all_solutions.take(2)
-    else
-      most_recent_winner = Comment.where(user_id: current_user.id).last.winner
-    end
+    all_solutions
   end
 
   def self.get_response

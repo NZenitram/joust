@@ -18,7 +18,6 @@ class SessionsController < ApplicationController
       redirect_to root_path
     end
 
-
     private
       attr_reader :user_credentials
 
