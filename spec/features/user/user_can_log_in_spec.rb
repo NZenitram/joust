@@ -5,11 +5,11 @@ describe 'a user can log in' do
     stub = stub_omniauth
     user = create(:user)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit '/'
     expect(page).to have_content('Login with Census')
 
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit '/'
     expect(page).to have_content('Log Out')
