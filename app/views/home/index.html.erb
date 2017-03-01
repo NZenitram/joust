@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row">
-    <div id="solution-code-one"   >
+    <div id="solution-code-one" class="col s6" >
     <% if current_user == nil %>
     <% else %>
       <%= CodeRay.scan(@solutions.first[:content], :ruby).div.html_safe %>
-      <%= button_to 'Vote', "", id: 'solution-one', data: { winner: "#{@solutions.first[:id]}", loser: "#{@solutions.second[:id]}" } %>
+      <%= button_to 'Vote', "", id: 'solution-one', class: 'btn waves-effect waves-light', data: { winner: "#{@solutions.first[:id]}", loser: "#{@solutions.second[:id]}" } %>
     </div>
 
-    <div id="solution-code-two" >
+    <div id="solution-code-two" class="col s6" >
       <%= CodeRay.scan(@solutions.second[:content], :ruby).div.html_safe %>
-      <%= button_to 'Vote', "", id: 'solution-two', selected_id: "#{@solutions.second[:id]}", second_id: "#{@solutions.first[:id]}" %>
+      <%= button_to 'Vote', "", id: 'ssolution-two', class: 'btn waves-effect waves-light', selected_id: "#{@solutions.second[:id]}", second_id: "#{@solutions.first[:id]}" %>
     </div>
   </div>
 
