@@ -10,7 +10,6 @@ describe 'when a user votes on a comment' do
     within('#solution-code-one') do
       click_on 'Vote'
     end
-    save_and_open_page
 
     expect(page).to have_content('Vote')
   end
