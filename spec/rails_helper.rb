@@ -43,6 +43,16 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = false
 
+  def stub_omniauth
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:census] =
+  OmniAuth::AuthHash.new({
+    provider: "Census",
+    uid: 50,
+    token: '1d7ff31ba472ed175978ac864cb9b74076208bb9b38798c42e14a0817f804a1b'
+  })
+end
+
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
